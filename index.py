@@ -4,36 +4,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return ""
-# Simple Python Example
-
-# Variables
-name = "Alice"
-age = 25
-
-# Print a greeting
-print("Hello, " + name + "!")
-print("You are", age, "years old.")
-
-# Simple math
-a = 10
-b = 5
-print("Sum:", a + b)
-print("Difference:", a - b)
-print("Product:", a * b)
-print("Division:", a / b)
-
-# If statement
-if age >= 18:
-    print(name, "is an adult.")
-else:
-    print(name, "is a minor.")
-
-# Loop
-print("Counting to 5:")
-for i in range(1, 6):
-    print(i)
-    ""
+    return """
+    <h1>My App</h1>
+    <form action="/greet" method="get">
+        <input type="text" name="name" placeholder="Type your name...">
+        <button type="submit">Submit</button>
+    </form>
+    """
 
 @app.route("/greet")
 def greet():
