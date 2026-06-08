@@ -4,9 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    while(true) {
-        <h1>Hello, World!</h1>
-    }
     return """
     <h1>My App</h1>
     <form action="/greet" method="get">
