@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return """
+    return ""
 # Simple Python Example
 
 # Variables
@@ -33,7 +33,7 @@ else:
 print("Counting to 5:")
 for i in range(1, 6):
     print(i)
-    """
+    ""
 
 @app.route("/greet")
 def greet():
