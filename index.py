@@ -10,11 +10,12 @@ def greet():
     return """
     <h1 style="text-align: center;">Hi, please fill out the form below:</h1>
     <form action="/submitted" method="get">
-        <input type="text" name="name" placeholder="Enter your full legal name" required>
-        <input type="text" name="Job" placeholder="Enter any previous work experience" required>
-        <input type="number" name="Exp" placeholder="Enter your previous experience (in years)" required>
-
-
+        <p>Enter your full legal name</p>
+        <p><input type="text" name="name" placeholder="Enter" required></p>
+        <p>Enter any previous work experience</p>
+        <p><input type="text" name="Job" placeholder="Enter" required></p>
+        <p>Enter your previous experience (in years)</p>
+        <p><input type="number" name="Exp" placeholder="Enter" required></p>
         <button type="submit">Submit</button>
     </form>
     """
