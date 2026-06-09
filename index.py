@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -55,6 +55,7 @@ def Basic():
 #     print(greet())
 @app.route("/Personal")
 def Personal():
+    name = __name__
     return """
     <form action="/submitted" method="get">
         <h1 style="text-align: center;">Please fill out the form below:</h1>"
@@ -76,15 +77,22 @@ def submitted():
 
 @app.route("/info")
 def Info():
+    name = request.args.get("name","null")
+    birthdate = request.args.get("birthdate","null")
+    Job = request.args.get("Job","null")
+    Exp = request.args.get("Exp","null")
+    SSN = request.args.get("SSN","null")
+    Address = request.args.get("Address","null")
+    Phone = request.args.get("Phone","null")
     return """
     <h1 style="text-align: center;">Personal Information</h1>
-    <h1>Name: <name></h1>
-    <h1>Birthdate: <birthdate></h1>
-    <h1>Previous Work Experience: <Job></h1>
-    <h1>Years of Work Experience: <Exp></h1>
-    <h1>SSN: <SSN></h1>
-    <h1>Address: <Address></h1>
-    <h1>Phone Number: <Phone></h1>
+    <h1>Name: {name}</h1>
+    <h1>Birthdate: {birthdate}</h1>
+    <h1>Previous Work Experience: {Job}</h1>
+    <h1>Years of Work Experience: {Exp}</h1>
+    <h1>SSN: {SSN}</h1>
+    <h1>Address: {Address}</h1>
+    <h1>Phone Number: {Phone}</h1>
     
     
     
