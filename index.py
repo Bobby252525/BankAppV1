@@ -2,11 +2,13 @@ from flask import Flask
 
 app = Flask(__name__)
 @app.route("/")
+def home():
+    return greet()
 def greet():
     # Variables
     name = "Alice"
     age = 25
-
+    
     # Print a greeting
     print("Hello, " + name + "!")
     print("You are", age, "years old.")
