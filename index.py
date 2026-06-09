@@ -12,9 +12,11 @@ def greet():
     <form action="/submitted" method="get">
         <p>Enter your full legal name</p>
         <p><input type="text" name="name" placeholder="Enter" required></p>
+        <p>Please enter your birthdate</p>
+        <p><input type="date" name="birthdate" required></p>
         <p>Enter any previous work experience</p>
         <p><input type="text" name="Job" placeholder="Enter" required></p>
-        <p>Enter your previous experience (in years)</p>
+        <p>Enter years of work experience</p>
         <p><input type="number" name="Exp" placeholder="Enter" required></p>
         <button type="submit">Submit</button>
     </form>
