@@ -79,7 +79,14 @@ def Personal():
 
 @app.route("/submitted")
 def submitted():
-    return "Thank you for submitting the form!"
+    return f"""
+    <form action="/info" method="get">
+        <p>Thank you for submitting your information</p>
+        <button type="submit">View stolen information</button>
+    </form>
+
+
+    """
 
 @app.route("/info")
 def Info():
