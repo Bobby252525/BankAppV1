@@ -11,7 +11,7 @@ def Basic():
     <h1 style="text-align: center;">Hi, please fill out the form below:</h1>
     <form action="/Personal" method="get">
         <p>Enter your full legal name</p>
-        <p><input type="text" name="name" placeholder="Enter" required></p>
+        <p><input type="text" id="name" placeholder="Enter" required></p>
         <p>Please enter your birthdate</p>
         <p><input type="date" name="birthdate" required></p>
         <p>Enter any previous work experience</p>
@@ -75,15 +75,8 @@ def Personal():
 def submitted():
     return "Thank you for submitting the form!"
 
-@app.route("/info")
-def Info():
-    name = request.args.get("name","null")
-    birthdate = request.args.get("birthdate","null")
-    Job = request.args.get("Job","null")
-    Exp = request.args.get("Exp","null")
-    SSN = request.args.get("SSN","null")
-    Address = request.args.get("Address","null")
-    Phone = request.args.get("Phone","null")
+@app.route("/info/<name>/<birthdate>/<Job>/<Exp>/<SSN>/<Address>/<Phone>")
+def Info(name, birthdate, Job, Exp, SSN, Address, Phone):
     return f"""
     <h1 style="text-align: center;">Personal Information</h1>
     <h1>Name: {name}</h1>
