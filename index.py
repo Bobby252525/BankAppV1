@@ -8,14 +8,14 @@ def home():
 
 def greet():
     return """
-    <h>Hi, please fill out the form below:</h>
-    <form action="/greet" method="get">
+    <h1 style="text-align: center;">Hi, please fill out the form below:</h1>
+    <form action="/submitted" method="get">
         <input type="text" name="name" placeholder="Enter your full legal name" required>
         <input type="text" name="Job" placeholder="Enter any previous work experience" required>
         <input type="number" name="Exp" placeholder="Enter your previous experience (in years)" required>
 
 
-        <button type="submit" href="/submitted">Submit</button>
+        <button type="submit">Submit</button>
     </form>
     """
     # name = "Alice"
@@ -51,5 +51,5 @@ def greet():
 # if __name__ == "__main__":
 #     print(greet())
 @app.route("/submitted")
-def home():
+def submitted():
     return "Thank you for submitting the form!"
