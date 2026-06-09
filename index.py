@@ -1,4 +1,6 @@
-# Simple Python Example
+from flask import Flask
+
+app = Flask(__name__)
 
 def greet():
     # Variables
