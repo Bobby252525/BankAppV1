@@ -1,21 +1,28 @@
-from flask import Flask, request
+# Simple Python Example
 
-app = Flask(__name__)
+# Variables
+name = "Alice"
+age = 25
 
-@app.route("/")
-def home():
-    return """
-    <h1>My App</h1>
-    <form action="/greet" method="get">
-        <input type="text" name="name" placeholder="Type your name...">
-        <button type="submit">Submit</button>
-    </form>
-    """
+# Print a greeting
+print("Hello, " + name + "!")
+print("You are", age, "years old.")
 
-@app.route("/greet")
-def greet():
-    name = request.args.get("name", "stranger")
-    return f"""
-    <h1>Hello, {name}!</h1>
-    <a href="/">Go Back</a>
-    """
+# Simple math
+a = 10
+b = 5
+print("Sum:", a + b)
+print("Difference:", a - b)
+print("Product:", a * b)
+print("Division:", a / b)
+
+# If statement
+if age >= 18:
+    print(name, "is an adult.")
+else:
+    print(name, "is a minor.")
+
+# Loop
+print("Counting to 5:")
+for i in range(1, 6):
+    print(i)
