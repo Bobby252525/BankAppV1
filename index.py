@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return greet()
+    return Basic()
 
-def greet():
+def Basic():
     return """
     <h1 style="text-align: center;">Hi, please fill out the form below:</h1>
-    <form action="/submitted" method="get">
+    <form action="/Personal" method="get">
         <p>Enter your full legal name</p>
         <p><input type="text" name="name" placeholder="Enter" required></p>
         <p>Please enter your birthdate</p>
@@ -53,6 +53,22 @@ def greet():
 
 # if __name__ == "__main__":
 #     print(greet())
+def Personal():
+    return """
+    <form action="/submitted" method="get">
+        <h1 style="text-align: center;">Please fill out the form below:</h1>"
+        <p>Enter your SSN</p>
+        <p><input type="text" name="SSN" placeholder="Enter" required></p>
+        <p>Enter your address</p>
+        <p><input type="text" name="Address" placeholder="Enter" required></p>
+        <p>Enter your phone number</p>
+        <p><input type="text" name="Phone" placeholder="Enter" required></p>
+        <button type="submit">Submit</button>
+
+
+
+    """
+
 @app.route("/submitted")
 def submitted():
     return "Thank you for submitting the form!"
