@@ -7,7 +7,7 @@ def home():
     return Basic()
 
 def Basic():
-    return """
+    return f"""
     <h1 style="text-align: center;">Hi, please fill out the form below:</h1>
     <form action="/Personal" method="get">
         <p>Enter your full legal name</p>
@@ -56,9 +56,9 @@ def Basic():
 @app.route("/Personal")
 def Personal():
     name = __name__
-    return """
+    return f"""
     <form action="/submitted" method="get">
-        <h1 style="text-align: center;">Please fill out the form below:</h1>"
+        <h1 style="text-align: center;">Please fill out the form below:</h1>
         <p>Enter your SSN</p>
         <p><input type="number" name="SSN" placeholder="Enter" required></p>
         <p>Enter your address</p>
