@@ -59,11 +59,11 @@ def Personal():
     <form action="/submitted" method="get">
         <h1 style="text-align: center;">Please fill out the form below:</h1>"
         <p>Enter your SSN</p>
-        <p><input type="text" name="SSN" placeholder="Enter" required></p>
+        <p><input type="number" name="SSN" placeholder="Enter" required></p>
         <p>Enter your address</p>
         <p><input type="text" name="Address" placeholder="Enter" required></p>
         <p>Enter your phone number</p>
-        <p><input type="text" name="Phone" placeholder="Enter" required></p>
+        <p><input type="number" name="Phone" placeholder="Enter" required></p>
         <button type="submit">Submit</button>
 
 
@@ -73,3 +73,19 @@ def Personal():
 @app.route("/submitted")
 def submitted():
     return "Thank you for submitting the form!"
+
+@app.route("/info")
+def Info():
+    return """
+    <h1 style="text-align: center;">Personal Information</h1>
+    <h1>Name: <name></h1>
+    <h1>Birthdate: <birthdate></h1>
+    <h1>Previous Work Experience: <Job></h1>
+    <h1>Years of Work Experience: <Exp></h1>
+    <h1>SSN: <SSN></h1>
+    <h1>Address: <Address></h1>
+    <h1>Phone Number: <Phone></h1>
+    
+    
+    
+    """
