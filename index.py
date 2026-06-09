@@ -18,7 +18,6 @@ def Basic():
         <p><input type="text" name="Job" placeholder="Enter" required></p>
         <p>Enter years of work experience</p>
         <p><input type="number" name="Exp" placeholder="Enter" required></p>
-        <button type="submit">Submit</button>
     </form>
     <form action="/Personal" method="get">
         <button type="submit">Submit</button>
@@ -68,7 +67,6 @@ def Personal():
         <p><input type="text" name="Address" placeholder="Enter" required></p>
         <p>Enter your phone number</p>
         <p><input type="number" name="Phone" placeholder="Enter" required></p>
-        <button type="submit">Submit</button>
     </form>
     <form action="/submitted" method="get">
         <button type="submit">Submit</button>
