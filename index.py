@@ -53,6 +53,7 @@ def Basic():
 
 # if __name__ == "__main__":
 #     print(greet())
+@app.route("/Personal")
 def Personal():
     return """
     <form action="/submitted" method="get">
