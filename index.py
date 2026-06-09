@@ -8,7 +8,7 @@ def home():
 
 def greet():
     name = "Alice"
-    age = 25
+    age = int(input("Enter your age: "))
 
     # Build the output as a string
     result = ""
