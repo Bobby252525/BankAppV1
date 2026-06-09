@@ -7,35 +7,49 @@ def home():
     return greet()
 
 def greet():
-    name = "Alice"
-    age = int(input("Enter your age: "))
+    return """
+    <h>Hi, please fill out the form below:</h>
+    <form action="/greet" method="get">
+        <input type="text" name="name" placeholder="Enter your full legal name" required>
+        <input type="text" name="Job" placeholder="Enter any previous work experience" required>
+        <input type="number" name="Exp" placeholder="Enter your previous experience (in years)" required>
 
-    # Build the output as a string
-    result = ""
 
-    result += "Hello, " + name + "!\n"
-    result += "You are " + str(age) + " years old.\n\n"
+        <button type="submit" href="/submitted">Submit</button>
+    </form>
+    """
+    # name = "Alice"
+    # age = int(input("Enter your age: "))
 
-    # Simple math
-    a = 10
-    b = 5
-    result += "Sum: " + str(a + b) + "\n"
-    result += "Difference: " + str(a - b) + "\n"
-    result += "Product: " + str(a * b) + "\n"
-    result += "Division: " + str(a / b) + "\n\n"
+    # # Build the output as a string
+    # result = ""
 
-    # If statement
-    if age >= 18:
-        result += name + " is an adult.\n"
-    else:
-        result += name + " is a minor.\n"
+    # result += "Hello, " + name + "!\n"
+    # result += "You are " + str(age) + " years old.\n\n"
 
-    # Loop
-    result += "Counting to 5:\n"
-    for i in range(1, 6):
-        result += str(i) + "\n"
+    # # Simple math
+    # a = 10
+    # b = 5
+    # result += "Sum: " + str(a + b) + "\n"
+    # result += "Difference: " + str(a - b) + "\n"
+    # result += "Product: " + str(a * b) + "\n"
+    # result += "Division: " + str(a / b) + "\n\n"
 
-    return result  # ✅ return instead of print
+    # # If statement
+    # if age >= 18:
+    #     result += name + " is an adult.\n"
+    # else:
+    #     result += name + " is a minor.\n"
 
-if __name__ == "__main__":
-    print(greet())
+    # # Loop
+    # result += "Counting to 5:\n"
+    # for i in range(1, 6):
+    #     result += str(i) + "\n"
+
+    # return result  # ✅ return instead of print
+
+# if __name__ == "__main__":
+#     print(greet())
+@app.route("/submitted")
+def home():
+    return "Thank you for submitting the form!"
