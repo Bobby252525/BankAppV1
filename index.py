@@ -15,7 +15,7 @@ def home():
         <input type="text" name="Job" placeholder="Enter" required>
         <p>Years of experience</p>
         <input type="number" name="Exp" placeholder="Enter" required>
-        <button type="submit">Next</button>
+        <p><button type="submit">Next</button></p>
     </form>
     """
 
@@ -39,7 +39,7 @@ def Personal():
         <input type="text" name="Address" placeholder="Enter" required>
         <p>Phone number</p>
         <input type="number" name="Phone" placeholder="Enter" required>
-        <button type="submit">Submit</button>
+        <p><button type="submit">Submit</button></p>
     </form>
     """
 @app.route("/submit")
@@ -62,7 +62,7 @@ def Submit():
         <input type="hidden" name="Address" value="{address}">
         <input type="hidden" name="Phone" value="{phone}">
         <h1 style="text-align: center;">Thank You For the Submission!</h1>
-        <button type="submit">View Stolen Information</button>
+        <p><button type="submit">View Stolen Information</button></p>
     """
 
 
