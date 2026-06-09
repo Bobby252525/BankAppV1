@@ -84,7 +84,7 @@ def Info():
     SSN = request.args.get("SSN","null")
     Address = request.args.get("Address","null")
     Phone = request.args.get("Phone","null")
-    return """
+    return f"""
     <h1 style="text-align: center;">Personal Information</h1>
     <h1>Name: {name}</h1>
     <h1>Birthdate: {birthdate}</h1>
