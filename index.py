@@ -62,7 +62,7 @@ def Submit():
         <input type="hidden" name="Address" value="{address}">
         <input type="hidden" name="Phone" value="{phone}">
         <h1 style="text-align: center;">Thank You For the Submission!</h1>
-        <p><button type="submit">View Stolen Information</button></p>
+        <p><button type="submit">View Information</button></p>
     """
 
 
